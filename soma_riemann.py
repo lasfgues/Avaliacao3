@@ -6,7 +6,7 @@ x = sp.Symbol('x')
 
 def soma_riemann(expression, a, b, n):
   try:
-    expr = sp.sympify(expression, locals={"e": sp.E})
+    expr = sp.sympify(expression, locals={"e": sp.E, "pi": sp.pi})
     f_lambd = sp.lambdify(x, expr, modules=["numpy"])
 
     a, b, n = int(a), int(b), int(n)
